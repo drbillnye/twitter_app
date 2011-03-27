@@ -3,6 +3,7 @@ TwitterApp::Application.routes.draw do
   match '/about', :to => 'pages#about'
   match '/help', :to => 'pages#help'
   root :to => 'pages#home'
+  match '/signup', :to => 'users#new'
 
   get "pages/about"
 
@@ -13,6 +14,8 @@ TwitterApp::Application.routes.draw do
   get "pages/about"
 
   get "pages/help"
+
+  get "users/new"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
